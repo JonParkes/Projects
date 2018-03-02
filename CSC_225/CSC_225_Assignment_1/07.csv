@@ -1,0 +1,105 @@
+
+<!-- saved from url=(0453)https://webhome.csc.uvic.ca/~bbird/225k17_oatmeal/oatmeal_display.py?lis_person_name_full=Jonathan%20Parkes&resource_name=07_FerriesI_model_output.txt&oauth_nonce=82466228&oauth_timestamp=1497237912&page_action=view_resource&oauth_consumer_key=FwRQreC&oauth_signature_method=HMAC-SHA1&test_id1=07_FerriesI&test_id2=V00826631&test_series=225k17_a1_06112017_2pm&oauth_version=1.0&oauth_signature=2aXDFyMnxWTckYUm3VE6LT6CKlw%3D&lis_person_sourcedid=jparkes -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>CSC 225 - Summer 2017 - Testing Database</title>
+	<style type="text/css">
+		a {  
+			color: #000099;  
+			font-weight: bold;
+		}
+		a:link{
+			color: #006699;
+		}
+		a:visited {
+			color: #5493b4;
+		}
+		a.userlink {  
+			color: #000000;  
+			font-weight: bold;
+			text-decoration: none;
+		}
+		a.userlink:link{
+			color: #000000;
+		    text-decoration: none;
+		}
+		a.userlink:visited {
+			color: #000000;
+		    text-decoration: none;
+		}
+		th.colheader {
+			height: 75px;
+			white-space: nowrap;
+		}
+		th.colheader > div {
+			transform: 
+				translate(11px, 18px)
+				rotate(300deg);
+			width: 30px;
+		}
+		th.colheader > div > span {
+			border-bottom: 1.5px solid #000000;
+			padding: 5px 10px;
+		}
+		td.rowheader{
+			padding-right: 10px;
+			text-align: left;
+		}
+		td.scorecell{
+			font-size: 8px;
+			text-align: center;
+		}
+    </style>
+  </head>
+  <body style="color: rgb(0, 0, 0); background-color: rgb(229,229,229); font-family: Verdana,Helvetica,Arial,sans-serif;">
+	
+
+    <table align="center" style="border: 1px solid rgb(152, 170, 177); width: 80%; background-color: rgb(255, 255, 255);">
+      <tbody>
+        <tr>
+          <td>
+<table style="width: 100%;">
+				  <tbody>
+					<tr>
+					  <td style="text-align: left;"> <span style="font-family: Times New Roman,Times,serif; font-variant: small-caps; font-size: 28pt;">CSC 225 - Summer 2017 - Testing Database</span>
+						</td>
+					</tr>
+				  </tbody>
+				</table>
+				<hr>
+		
+<p><a href="https://webhome.csc.uvic.ca/~bbird/225k17_oatmeal/oatmeal_display.py?lis_person_name_full=Jonathan%20Parkes&amp;oauth_nonce=09107620&amp;oauth_timestamp=1497237916&amp;page_action=view_output&amp;oauth_consumer_key=FwRQreC&amp;oauth_signature_method=HMAC-SHA1&amp;test_id1=07_FerriesI&amp;test_id2=V00826631&amp;test_series=225k17_a1_06112017_2pm&amp;oauth_version=1.0&amp;oauth_signature=oNy6%2FVax%2FWiRtleXBABt06h1qCY%3D&amp;lis_person_sourcedid=jparkes">Return to test output</a></p>
+<pre>Compiler output:
+
+
+Running Aggregate with command line: java Aggregate count duration_minutes 07_FerriesI.csv vessel_name
+Output:
+vessel_name,count(duration_minutes)
+Bowen Queen,77.000
+Coastal Celebration,223.000
+Coastal Inspiration,203.000
+Coastal Renaissance,202.000
+Queen of Alberni,91.000
+Queen of Capilano,397.000
+Queen of Coquitlam,368.000
+Queen of Cowichan,193.000
+Queen of Cumberland,16.000
+Queen of New Westminster,122.000
+Queen of Oak Bay,216.000
+Queen of Surrey,425.000
+Skeena Queen,126.000
+Spirit of British Columbia,60.000
+
+
+Total time: 1.3616 seconds
+
+</pre>
+</td>
+			</tr>
+		  </tbody>
+		</table>
+
+  
+
+	
+</body></html>

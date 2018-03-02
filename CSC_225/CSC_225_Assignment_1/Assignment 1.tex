@@ -1,0 +1,104 @@
+ 
+\documentclass[letterpaper, 12pt]{artikel3}
+
+\usepackage{fullpage}
+
+% These packages add a few useful math symbols.
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+
+% The verbatim package allows pre-formatted text (like code) to be included.
+\usepackage{verbatim}
+
+% The algorithmic package provides a somewhat convenient way to typeset
+% algorithms.
+\usepackage{algorithmic}
+
+% Set the title, author and date
+\title{CSC 225 Assignment 1}
+% The '\today' command inserts the current date
+\date{ \today }
+\author{Jonathan Parkes V00826631}
+
+
+\begin{document}
+
+\maketitle
+
+\section*{Question 1}
+A)$\theta$($log^{2}n$)
+
+B)$\theta$($nlogn$)
+
+\section*{Question 2}
+
+
+\begin{algorithmic}
+\STATE A)
+	\STATE Function LargestMissing(A, n, k)
+	\STATE $B[] \gets k$
+	\FOR{$i \gets 0, 1, 2, \ldots, n$}
+		\STATE $B[A[i]] \gets A[i]$
+	\ENDFOR
+	\FOR{$i \gets k, {k-1}, {k-2}, \ldots, 0$}
+		\IF {$j == 0$}
+			\STATE $LM \gets B[j]$
+		\ENDIF
+	\ENDFOR
+	\RETURN $LM$
+\end{algorithmic}
+
+This algorithm works because by creating a new array that is the size of the largest number we can put each number as we go through the original array in that numbers corresponding index in the new array.  By doing this we get a new array of size k that is sorted and has 0 in all positions of missing numbers in the time of O(n).  Therefore finding the largest missing number we just look through the new array backwards to find the first 0.  This works because the array given will always have numbers from 1 to k and this will have O(k).  This means that it will have an overall run time of O(n+k)
+
+\pagebreak
+
+
+\begin{algorithmic}
+\STATE B)
+	\STATE Function LargestMissing(A, n, k)
+	\STATE Sort(A)
+	\IF{A[n-1] != k}
+		\STATE return k
+	\ENDIF
+	\IF{A[0] != 1}
+		\STATE return 1
+	\ENDIF
+	\FOR{$i \gets {n-1}, {n-2}, \ldots, 1$}
+		\IF{A[i] != A[i-1] and (A[i]-1) != A[i-1]}
+			\STATE $LM \gets (A[i] - 1)$
+		\ENDIF
+	\ENDFOR
+	\RETURN $LM$
+\end{algorithmic}
+C)
+Any algorithm for LargestMissingNumber  must be $\Omega$(n)	in worst case because it will always have to go through the list of length n at least one time to find the largest missing number.	
+
+\section*{Question 3}
+
+Consider the recusance 2T(n - 1) + 3n + 1 if n >= 1
+
+While T(n) = 10 if n = 0
+				
+	2T(n-1) + 3n + 1
+	
+	2[2T(n-2) + 3(n-1) + 1] + 3n + 1
+	
+	=$2^2$T(n-2) + (2)(3)(n-1) + 3n + 2 +1
+	
+	2[$2^2$T(n-2) + (2)(3)(n-1) + 3n + 2 +1] +3n + 1
+		
+	=$2^3$T(n-3) + ($2^2$)(3)(n-2) + (2)(3)(n - 1) + 3n + $2^2$ + 2 +1
+	
+	$2^i$T(n - i) + ($2^{i - 1}$)(3)(n - (i - 1)) + ($2^{i - 2}$)(3)(n - (i - 2)) + 3n + $2^{i - 1}$ + $2^{i - 2}$ + $2^{i - 3}$
+	
+	= $2^i$T(n - i) + 3$\sum_{j = 0}^{i - 1}2^j(n-j)$ + $\sum_{k = 0}^{i-1}2^k$
+	
+			Need n = 0 for T(n) to be 10
+			Therefore i = n
+			
+	= $2^n$T(n - n) + 3$\sum_{j = 0}^{n - 1}2^j(n-j)$ + $\sum_{k = 0}^{n-1}2^k$
+	
+	= $2^n$(10) + 3$\sum_{j = 0}^{n - 1}2^j(n-j)$ + $\sum_{k = 0}^{n-1}2^k$
+
+\end{document}
